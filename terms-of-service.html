@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service — AI Clipping Pipeline</title>
+<style>
+  :root {
+    --bg: #f5f6f4;
+    --surface: #ffffff;
+    --ink: #14181a;
+    --ink-secondary: #4b5560;
+    --ink-faint: #7c8781;
+    --border: #dde2e1;
+          --accent: #0e7c74;
+    --accent-ink: #063f3b;
+    --accent-tint: #e4f2ef;
+      }
+  @media (prefers-color-scheme: dark) {
+          :root:not([data-theme="light"]) {
+      --bg: #0e1211;
+      --surface: #161b1a;
+      --ink: #e7ecea;
+              --ink-secondary: #9aa7a3;
+      --ink-faint: #64716c;
+      --border: #263130;
+      --accent: #3fd1be;
+      --accent-ink: #b6f2e6;
+              --accent-tint: #17302c;
+          }
+            }
+  :root[data-theme="dark"] {
+    --bg: #0e1211;
+    --surface: #161b1a;
+    --ink: #e7ecea;
+          --ink-secondary: #9aa7a3;
+    --ink-faint: #64716c;
+    --border: #263130;
+    --accent: #3fd1be;
+    --accent-ink: #b6f2e6;
+          --accent-tint: #17302c;
+  }
+  * { box-sizing: border-box; }
+  body {
+        margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, "Iowan Old Style", "Georgia", "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+  header.bar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif;
+  }
+  header.bar .brand { display: flex; align-items: baseline; gap: 0.6rem; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.01em; }
+  header.bar .brand .dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); display: inline-block; }
+  header.bar nav { display: flex; gap: 1.25rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary); }
+  header.bar nav a { color: inherit; text-decoration: none; }
+  header.bar nav a:hover, header.bar nav a.current { color: var(--accent-ink); }
+  header.bar nav a.current { border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+  main { max-width: 720px; margin: 0 auto; padding: 3.2rem 1.5rem 6rem; }
+  .doc-head { font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; margin-bottom: 2.6rem; }
+  .doc-head .eyebrow { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent-ink); margin: 0 0 0.6rem; }
+  h1 { font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; font-weight: 650; font-size: 2.15rem; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 0.75rem; text-wrap: balance; }
+  .doc-head .meta { font-size: 0.85rem; color: var(--ink-secondary); display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .doc-head .meta b { color: var(--ink); font-weight: 600; }
+  .summary { margin-top: 1.6rem; padding: 1rem 1.15rem; background: var(--accent-tint); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border)); border-radius: 6px; font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.55; }
+  .summary b { color: var(--ink); }
+  section.clause { display: grid; grid-template-columns: 2.6rem 1fr; gap: 0 1rem; padding: 1.7rem 0; border-top: 1px solid var(--border); }
+  .clause .num { font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace; font-size: 0.82rem; color: var(--accent-ink); padding-top: 0.2rem; }
+  .clause h2 { font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; font-size: 1.05rem; font-weight: 650; margin: 0 0 0.6rem; letter-spacing: -0.005em; }
+  .clause p { margin: 0 0 0.85rem; color: var(--ink); max-width: 62ch; }
+  .clause p:last-child { margin-bottom: 0; }
+  .clause ul { margin: 0 0 0.85rem; padding-left: 1.2rem; max-width: 62ch; }
+  .clause li { margin-bottom: 0.35rem; }
+  .clause .fine { color: var(--ink-secondary); font-size: 0.92rem; }
+  a { color: var(--accent-ink); text-decoration-color: color-mix(in srgb, var(--accent-ink) 40%, transparent); }
+  a:hover { text-decoration-color: var(--accent-ink); }
+  footer { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 3rem; font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; font-size: 0.8rem; color: var(--ink-faint); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  @media (max-width: 560px) { section.clause { grid-template-columns: 1fr; gap: 0.3rem 0; } .clause .num { padding-top: 0; } h1 { font-size: 1.7rem; } }
+</style>
+  </head>
+  <body>
+  <header class="bar">
+    <div class="brand"><span class="dot"></span> AI Clipping Pipeline</div>
+  <nav>
+    <a href="terms-of-service.html" class="current">Terms</a>
+    <a href="privacy-policy.html">Privacy</a>
+    </nav>
+  </header>
+  <main>
+    <div class="doc-head">
+      <p class="eyebrow">Legal &middot; Terms of Service</p>
+      <h1>Terms of Service</h1>
+    <div class="meta">
+      <span><b>Effective</b> Aug 16, 2026</span>
+      <span><b>Applies to</b> AI Clipping Pipeline</span>
+      <span><b>Contact</b> <a href="mailto:afferedo720@gmail.com">afferedo720@gmail.com</a></span>
+    </div>
+    <div class="summary">
+        <b>In short:</b> AI Clipping Pipeline is an automation tool, operated by a single person, that turns
+      long-form video into short clips and posts them to TikTok, Instagram, and YouTube accounts the
+      operator has explicitly connected. It never posts anywhere without an account owner's own
+      platform login and consent, and access can be revoked at any time from that platform's own
+        settings.
+      </div>
+    </div>
+    <section class="clause">
+      <div class="num">01</div>
+      <div>
+        <h2>What this service does</h2>
+      <p>AI Clipping Pipeline is an automated content pipeline: it analyzes source video, selects and
+      edits short-form clips, and publishes them to social platforms on behalf of accounts that have
+      been connected to it. It is operated as a single-person tool, not a public multi-tenant
+        platform &mdash; every account it publishes to belongs to the operator or to a creator who has
+      directly authorized it.</p>
+      </div>
+    </section>
+    <section class="clause">
+      <div class="num">02</div>
+      <div>
+        <h2>Connecting an account</h2>
+      <p>Connecting a TikTok, Instagram, or YouTube account happens through that platform's own
+        official OAuth sign-in &mdash; this service never sees or stores a platform password. Authorizing
+        access grants the pipeline permission to publish video content to that account under the
+      scopes shown on the platform's own consent screen at the time of authorization.</p>
+        <p class="fine">Until a platform's own app review is complete, some platforms (TikTok in particular) restrict
+        posting to the connected account itself rather than the public.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">03</div>
+    <div>
+      <h2>Acceptable use</h2>
+      <ul>
+        <li>Only connect accounts you own or are explicitly authorized to publish on behalf of.</li>
+        <li>Only submit source video you have the rights to clip and redistribute.</li>
+        <li>Do not use the pipeline to publish content that violates the destination platform's own
+            community guidelines &mdash; those guidelines still apply in full to anything this tool posts.</li>
+      </ul>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">04</div>
+    <div>
+      <h2>Content ownership</h2>
+      <p>The operator claims no ownership over source video or the clips generated from it. Ownership
+        and rights remain exactly as they were before the pipeline touched the content; the pipeline
+      acts purely as an editing and publishing tool.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">05</div>
+    <div>
+      <h2>No warranty</h2>
+      <p>The pipeline is provided as-is. Automated clip selection and publishing can make mistakes &mdash;
+      a wrong cut, a missed post, a platform-side rejection. Review is expected before anything
+      published matters commercially or reputationally.</p>
+            </div>
+          </section>
+          <section class="clause">
+            <div class="num">06</div>
+            <div>
+              <h2>Revoking access</h2>
+              <p>Any connected account owner can revoke this pipeline's access at any time, directly from that
+              platform's own app-permissions settings (e.g. TikTok's or Instagram's connected-apps page).
+              Revocation takes effect immediately on the platform's side; the pipeline stops being able to
+              publish to that account as soon as the platform invalidates the token.</p>
+            </div>
+          </section>
+          <section class="clause">
+            <div class="num">07</div>
+            <div>
+              <h2>Changes to these terms</h2>
+              <p>These terms may be updated as the pipeline's functionality changes. The effective date above
+      reflects the last revision.</p>
+            </div>
+          </section>
+          <section class="clause">
+            <div class="num">08</div>
+            <div>
+              <h2>Contact</h2>
+              <p>Questions about these terms: <a href="mailto:afferedo720@gmail.com">afferedo720@gmail.com</a>.</p>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <span>AI Clipping Pipeline</span>
+  <span>See also: <a href="privacy-policy.html">Privacy Policy</a></span>
+        </footer>
+        </body>
+        </html>
+        

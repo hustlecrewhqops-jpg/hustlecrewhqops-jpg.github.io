@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — AI Clipping Pipeline</title>
+<style>
+  :root {
+    --bg: #f5f6f4;
+    --surface: #ffffff;
+    --ink: #14181a;
+    --ink-secondary: #4b5560;
+    --ink-faint: #7c8781;
+    --border: #dde2e1;
+    --accent: #0e7c74;
+    --accent-ink: #063f3b;
+    --accent-tint: #e4f2ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, "Iowan Old Style", Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  header.bar {
+    position: sticky; top: 0; z-index: 5;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 0.85rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    font-family: -apple-system, "Segoe UI", sans-serif;
+  }
+  header.bar .brand { display: flex; align-items: baseline; gap: 0.6rem; font-weight: 600; font-size: 0.95rem; }
+  header.bar .brand .dot { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent); display: inline-block; }
+  header.bar nav { display: flex; gap: 1.25rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary); }
+  header.bar nav a { color: inherit; text-decoration: none; }
+  header.bar nav a.current { color: var(--accent-ink); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+  main { max-width: 720px; margin: 0 auto; padding: 3.2rem 1.5rem 6rem; }
+  .doc-head { font-family: -apple-system, "Segoe UI", sans-serif; margin-bottom: 2.6rem; }
+  .doc-head .eyebrow { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent-ink); }
+  h1 { font-family: -apple-system, "Segoe UI", sans-serif; font-weight: 650; font-size: 2.15rem; margin: 0 0 0.75rem; }
+  .doc-head .meta { font-size: 0.85rem; color: var(--ink-secondary); display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .doc-head .meta b { color: var(--ink); }
+  .summary { margin-top: 1.6rem; padding: 1rem 1.15rem; background: var(--accent-tint); border: 1px solid var(--border); border-radius: 6px; font-family: -apple-system, "Segoe UI", sans-serif; font-size: 0.88rem; color: var(--ink-secondary); }
+  .summary b { color: var(--ink); }
+  table.data-table { width: 100%; border-collapse: collapse; margin: 0.4rem 0 0.9rem; font-size: 0.88rem; }
+  table.data-table th, table.data-table td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.data-table th { font-family: -apple-system, "Segoe UI", sans-serif; font-size: 0.72rem; text-transform: uppercase; color: var(--ink-secondary); }
+  .table-wrap { overflow-x: auto; max-width: 62ch; }
+  section.clause { display: grid; grid-template-columns: 2.6rem 1fr; gap: 0 1rem; padding: 1.7rem 0; border-top: 1px solid var(--border); }
+  .clause .num { font-family: ui-monospace, Consolas, monospace; font-size: 0.82rem; color: var(--accent-ink); }
+  .clause h2 { font-family: -apple-system, "Segoe UI", sans-serif; font-size: 1.05rem; font-weight: 650; margin: 0 0 0.6rem; }
+  .clause p { margin: 0 0 0.85rem; max-width: 62ch; }
+  .clause ul { margin: 0 0 0.85rem; padding-left: 1.2rem; max-width: 62ch; }
+  .clause .fine { color: var(--ink-secondary); font-size: 0.92rem; }
+  a { color: var(--accent-ink); }
+  footer { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 3rem; font-family: -apple-system, "Segoe UI", sans-serif; font-size: 0.8rem; color: var(--ink-faint); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><span class="dot"></span> AI Clipping Pipeline</div>
+  <nav>
+    <a href="terms-of-service.html">Terms</a>
+    <a href="privacy-policy.html" class="current">Privacy</a>
+  </nav>
+</header>
+<main>
+  <div class="doc-head">
+    <p class="eyebrow">Legal - Privacy Policy</p>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span><b>Effective</b> Aug 16, 2026</span>
+      <span><b>Applies to</b> AI Clipping Pipeline</span>
+      <span><b>Contact</b> <a href="mailto:afferedo720@gmail.com">afferedo720@gmail.com</a></span>
+    </div>
+    <div class="summary">
+      <b>In short:</b> This pipeline stores platform access tokens locally, one file per connected
+      account, only to publish clips on the account owner's behalf. It never sees platform passwords,
+      never sells or shares data with third parties, and access can be revoked at any time from the
+      platform's own settings.
+    </div>
+  </div>
+  <section class="clause">
+    <div class="num">01</div>
+    <div>
+      <h2>Who this covers</h2>
+      <p>AI Clipping Pipeline is operated by a single individual to publish short-form video clips to
+      TikTok, Instagram, and YouTube accounts that have been explicitly connected to it. This policy
+      describes what data the pipeline handles for those connected accounts - it is not a
+      general-audience consumer app.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">02</div>
+    <div>
+      <h2>What is collected</h2>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Data</th><th>Source</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>OAuth access and refresh tokens</td><td>Platform's own consent screen</td><td>Publish clips to the connected account</td></tr>
+            <tr><td>Account / page identifiers</td><td>Platform API</td><td>Address the right destination account</td></tr>
+            <tr><td>Source video and generated clips</td><td>Provided by the operator</td><td>Editing and publishing</td></tr>
+            <tr><td>Publish status and basic analytics</td><td>Platform API responses</td><td>Confirm a post succeeded; inform future clip selection</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine">Platform passwords are never collected, seen, or stored - sign-in happens entirely on the platform's own OAuth page.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">03</div>
+    <div>
+      <h2>How it's stored</h2>
+      <p>Access tokens are stored locally as one file per connected account, kept outside of source
+      control, and used only by the pipeline process itself to make authenticated calls to that
+      platform's official API. There is no central server collecting tokens across accounts or
+      operators.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">04</div>
+    <div>
+      <h2>How it's used</h2>
+      <ul>
+        <li>To authenticate a single publish request to the platform the token belongs to.</li>
+        <li>To check whether a previously submitted post finished publishing.</li>
+        <li>To refresh an expiring token so the account owner isn't asked to re-authorize constantly.</li>
+      </ul>
+      <p>Data is never used for advertising, resold, or shared with any third party beyond the
+        destination platform's own API required to publish the content.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">05</div>
+    <div>
+      <h2>Retention and deletion</h2>
+      <p>A token is kept only as long as the account stays connected. Deleting the local token file, or
+      revoking access from the platform's own app-permissions page, immediately and permanently ends
+      the pipeline's ability to act on that account. Email
+      <a href="mailto:afferedo720@gmail.com">afferedo720@gmail.com</a> to request confirmation that
+      an account's data has been removed.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">06</div>
+    <div>
+      <h2>Your controls</h2>
+      <p>Every connected account owner can revoke this pipeline's access at any time from that
+      platform's own settings (e.g. TikTok's or Instagram's connected-apps page) - no request to the
+      operator is required, and revocation takes effect immediately on the platform's side.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">07</div>
+    <div>
+      <h2>Children's privacy</h2>
+      <p>This pipeline is a creator/operator tool, not directed at children, and is not knowingly used
+      to connect accounts belonging to children.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">08</div>
+    <div>
+      <h2>Changes to this policy</h2>
+      <p>This policy may be updated as the pipeline's data handling changes. The effective date above
+      reflects the last revision.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">09</div>
+    <div>
+      <h2>Contact</h2>
+      <p>Questions about this policy or a data-deletion request:
+      <a href="mailto:afferedo720@gmail.com">afferedo720@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <span>AI Clipping Pipeline</span>
+  <span>See also: <a href="terms-of-service.html">Terms of Service</a></span>
+</footer>
+</body>
+</html>

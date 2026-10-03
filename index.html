@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Clipping Pipeline</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+:root {
+  --bg: #f5f6f4;
+  --surface: #ffffff;
+  --ink: #14181a;
+  --ink-secondary: #4b5560;
+  --ink-faint: #7c8781;
+  --border: #dde2e1;
+  --accent: #0e7c74;
+  --accent-ink: #063f3b;
+  --accent-tint: #e4f2ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1211; --surface: #161b1a; --ink: #e7ecea; --ink-secondary: #9aa7a3;
+    --ink-faint: #64716c; --border: #263130; --accent: #3fd1be; --accent-ink: #b6f2e6; --accent-tint: #17302c;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1211; --surface: #161b1a; --ink: #e7ecea; --ink-secondary: #9aa7a3;
+  --ink-faint: #64716c; --border: #263130; --accent: #3fd1be; --accent-ink: #b6f2e6; --accent-tint: #17302c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: Charter, "Iowan Old Style", Georgia, serif; font-size: 17px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+header.bar {
+  position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 0.85rem 1.5rem; background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--border);
+  font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif;
+}
+header.bar .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.01em; }
+header.bar .brand img { width: 22px; height: 22px; border-radius: 6px; display: block; }
+header.bar nav { display: flex; gap: 1.25rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-secondary); }
+header.bar nav a { color: inherit; text-decoration: none; }
+header.bar nav a:hover { color: var(--accent-ink); }
+main { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+.hero { font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; margin-bottom: 2.6rem; }
+.hero .eyebrow { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent-ink); margin: 0 0 0.8rem; }
+.hero h1 { font-weight: 650; font-size: 2.6rem; line-height: 1.12; letter-spacing: -0.01em; margin: 0 0 1rem; }
+.hero p.lede { color: var(--ink-secondary); font-size: 1.1rem; max-width: 56ch; margin: 0; font-family: Charter, Georgia, serif; }
+.logo-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.6rem; }
+.logo-row img { width: 56px; height: 56px; border-radius: 12px; }
+section.clause { display: grid; grid-template-columns: 2.6rem 1fr; gap: 0 1rem; padding: 1.7rem 0; border-top: 1px solid var(--border); }
+.clause .num { font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace; font-size: 0.82rem; color: var(--accent-ink); padding-top: 0.2rem; }
+.clause h2 { font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; font-size: 1.05rem; font-weight: 650; margin: 0 0 0.6rem; }
+.clause p { margin: 0; color: var(--ink); max-width: 62ch; }
+.cta { margin-top: 2.6rem; display: flex; gap: 0.9rem; flex-wrap: wrap; font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; }
+.cta a { display: inline-block; padding: 0.7rem 1.1rem; border-radius: 7px; font-size: 0.85rem; font-weight: 600; text-decoration: none; }
+.cta a.primary { background: var(--accent-ink); color: var(--bg); }
+.cta a.secondary { border: 1px solid var(--border); color: var(--ink); }
+footer { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 3rem; font-family: "Avenir Next", "Century Gothic", "Futura", sans-serif; font-size: 0.8rem; color: var(--ink-faint); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+@media (max-width: 560px) { .hero h1 { font-size: 1.9rem; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><img src="icon.png" alt="AI Clipping Pipeline"> AI Clipping Pipeline</div>
+  <nav>
+    <a href="terms-of-service.html">Terms</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </nav>
+</header>
+<main>
+  <div class="hero">
+    <div class="logo-row"><img src="icon.png" alt="AI Clipping Pipeline logo"></div>
+    <p class="eyebrow">Automated short-form publishing</p>
+    <h1>AI Clipping Pipeline</h1>
+    <p class="lede">A single-operator automation tool that turns long-form video into short clips and
+    publishes them to TikTok, Instagram, and YouTube accounts the operator has explicitly connected.</p>
+  </div>
+  <section class="clause">
+    <div class="num">01</div>
+    <div>
+      <h2>What it does</h2>
+      <p>Selects, edits, and captions short-form video clips, then publishes them to social accounts
+      that have been connected through each platform's own official OAuth sign-in.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">02</div>
+    <div>
+      <h2>Who it's for</h2>
+      <p>Operated as a single-person tool, not a public multi-tenant platform &mdash; every account
+      it publishes to belongs to the operator or to a creator who has directly authorized it.</p>
+    </div>
+  </section>
+  <section class="clause">
+    <div class="num">03</div>
+    <div>
+      <h2>Your control</h2>
+      <p>Any connected account owner can revoke access at any time from that platform's own
+      app-permissions settings. See the Privacy Policy and Terms of Service for full detail.</p>
+    </div>
+  </section>
+  <div class="cta">
+    <a class="primary" href="privacy-policy.html">Privacy Policy</a>
+    <a class="secondary" href="terms-of-service.html">Terms of Service</a>
+  </div>
+</main>
+<footer>
+  <span>AI Clipping Pipeline</span>
+  <span>Contact: <a href="mailto:afferedo720@gmail.com">afferedo720@gmail.com</a></span>
+</footer>
+</body>
+</html>
